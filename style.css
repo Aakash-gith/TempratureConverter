@@ -1,0 +1,118 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: rgba(171, 171, 224, 0.322);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 30px 25px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #333;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: #555;
+  font-size: 15px;
+  height: 20px;
+  min-height: 20px;
+}
+
+.converter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0 25px;
+  gap: 15px;
+}
+
+.temp-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.converter select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-bottom: 8px;
+  background-color: #fff;
+}
+
+.converter input {
+  width: 130px;
+  height: 55px;
+  font-size: 26px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.arrow {
+  font-size: 28px;
+  color: #666;
+}
+
+.result {
+  background-color: #cce7ff;
+  border: none;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 15px 0 25px;
+}
+
+.keypad button {
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #ffffff, #e4e4e4);
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.keypad button:hover {
+  background: linear-gradient(145deg, #dbe7ff, #f7faff);
+  transform: translateY(-2px);
+}
+
+.fact-box {
+  background: #fffbea;
+  border: 1px solid #ffe58f;
+  padding: 14px;
+  border-radius: 8px;
+  color: #444;
+  font-size: 14px;
+  text-align: left;
+  box-shadow: inset 0 0 6px rgba(255, 220, 150, 0.3);
+}
+
+.fact-box strong {
+  color: #e6a700;
+}
+
+#factText {
+  margin: 5px 0 0;
+}

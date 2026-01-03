@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Utility Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>TempConvert</h1>
+    <p id="dynamicText" class="subtitle"></p>
+
+    <div class="converter">
+      <div class="temp-box">
+        <select id="fromUnit">
+          <option value="C">°C Celsius</option>
+          <option value="F">°F Fahrenheit</option>
+        </select>
+        <input type="number" id="inputTemp" value="0" />
+      </div>
+
+      <span class="arrow">→</span>
+
+      <div class="temp-box">
+        <select id="toUnit">
+          <option value="F">°F Fahrenheit</option>
+          <option value="C">°C Celsius</option>
+        </select>
+        <input type="text" id="outputTemp" class="result" value="32.00" readonly />
+      </div>
+    </div>
+
+    <div class="keypad">
+      <button>7</button><button>8</button><button>9</button>
+      <button>4</button><button>5</button><button>6</button>
+      <button>1</button><button>2</button><button>3</button>
+      <button>0</button><button>←</button><button>C</button>
+    </div>
+
+    <div class="fact-box">
+      <strong>Did you know?</strong>
+      <p id="factText">Loading an interesting fact...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
