@@ -4,7 +4,6 @@ const outputTemp = document.getElementById("outputTemp");
 const fromUnit = document.getElementById("fromUnit");
 const toUnit = document.getElementById("toUnit");
 const buttons = document.querySelectorAll(".keypad button");
-const factText = document.getElementById("factText");
 const dynamicText = document.getElementById("dynamicText");
 
 // --- Temperature Conversion ---
@@ -27,15 +26,15 @@ function convertTemperature() {
     fromUnit.value === "C" && toUnit.value === "F"
       ? (value * 9) / 5 + 32
       : fromUnit.value === "F" && toUnit.value === "C"
-      ? ((value - 32) * 5) / 9
-      : value;
+        ? ((value - 32) * 5) / 9
+        : value;
   outputTemp.value = result.toFixed(2);
 }
 
 // --- Typing Animation for Subtitle ---
 const texts = [
-  "Instant temperature conversion with AI-powered facts.",
-  "Fast, simple, and accurate conversions.",
+  "Instant and accurate temperature conversion.",
+  "Fast, simple, and beautifully designed.",
 ];
 let textIndex = 0, charIndex = 0;
 function typeWriter() {
@@ -54,21 +53,4 @@ function typeWriter() {
 }
 typeWriter();
 
-// --- Random Facts Fetch ---
-async function getFact() {
-  try {
-    const res = await fetch("https://uselessfacts.jsph.pl/random.json?language=en");
-    const data = await res.json();
-    factText.textContent = data.text;
-  } catch {
-    const fallbackFacts = [
-      "Water freezes at 0°C and boils at 100°C.",
-      "The Fahrenheit scale was proposed in 1724.",
-      "Absolute zero is -273.15°C, the coldest possible temperature.",
-      "Temperature affects how fast sound travels."
-    ];
-    factText.textContent = fallbackFacts[Math.floor(Math.random() * fallbackFacts.length)];
-  }
-}
-getFact();
-setInterval(getFact, 10000); // new fact every 10 seconds
+
